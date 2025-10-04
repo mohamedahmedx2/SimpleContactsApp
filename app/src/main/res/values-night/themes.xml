@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.ContactsApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="floatingActionButtonStyle">@style/CustomStyleFAB</item>
+
+    </style>
+    <style name="CustomStyleFAB" parent="@style/Widget.Material3.FloatingActionButton.Secondary">
+        <item name="backgroundTint">@color/white</item>
+        <item name="tint">@color/primaryColor</item>
+    </style>
+
+    <style name="Theme.ContactsApp_TextColor" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+    <!--    <style name="CustomStyleFAB" parent="Widget.Material3.FloatingActionButton.Large.Secondary">-->
+<!--        <item name="backgroundTint">@color/white</item>-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--    </style>-->
+</resources>
