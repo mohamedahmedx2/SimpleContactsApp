@@ -9,32 +9,47 @@
     tools:context=".HomeActivity">
 
 
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/primaryColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/recyclerView"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="Route"
+            android:fitsSystemWindows="true"
+            app:titleTextAppearance="@style/Toolbar.Title"
+            app:titleTextColor="@color/white" />
+
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="0.5"
-        app:layout_constraintHeight_percent="0.30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
         app:lottie_autoPlay="true"
 
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/animation"
         tools:ignore="MissingConstraints" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="add"
-        android:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="30dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="add"
         android:src="@drawable/ic_plus"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
@@ -42,13 +57,12 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:spanCount="2"
         tools:itemCount="4"
-        >
+        tools:listitem="@layout/item">
 
     </androidx.recyclerview.widget.RecyclerView>
 
