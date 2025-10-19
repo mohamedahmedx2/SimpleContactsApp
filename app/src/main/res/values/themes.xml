@@ -29,10 +29,5 @@
         <item name="android:textColorPrimary">@color/black</item>
 
     </style>
-    <style name="Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/white</item>
-    </style>
 
 </resources>
