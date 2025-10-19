@@ -9,21 +9,6 @@
     tools:context=".HomeActivity">
 
 
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:background="@color/primaryColor"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/recyclerView"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:title="Route"
-            android:fitsSystemWindows="true"
-            app:titleTextAppearance="@style/Toolbar.Title"
-            app:titleTextColor="@color/white" />
-
-
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieView"
         android:layout_width="0dp"
@@ -59,8 +44,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:spanCount="2"
+        android:layout_marginTop="40dp"
         tools:itemCount="4"
         tools:listitem="@layout/item">
 

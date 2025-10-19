@@ -68,18 +68,27 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-
-
-
     }
 
-    fun updateUi(){
-        if (contacts.isEmpty()){
+    fun updateUi() {
+        if (contacts.isEmpty()) {
             binding.lottieView.visibility = View.VISIBLE
         } else
             binding.lottieView.visibility = View.GONE
 
     }
+
+    fun upDateUiBottomSheet(
+        bottomBinding: BottomSheetBinding,
+    ) {
+        bottomBinding.edName.editText?.text?.clear()
+        bottomBinding.edEmail.editText?.text?.clear()
+        bottomBinding.edNumber.editText?.text?.clear()
+        bottomBinding.edName.editText?.clearFocus()
+        bottomBinding.edEmail.editText?.clearFocus()
+        bottomBinding.edNumber.editText?.clearFocus()
+    }
+
     @SuppressLint("NotifyDataSetChanged")
     private fun validate(
         bottomBinding: BottomSheetBinding,
@@ -134,10 +143,11 @@ class HomeActivity : AppCompatActivity() {
                 name = name,
                 email = email,
                 phone = number
-                )
+            )
             adapter.addNewItem(contact)
             adapter.notifyDataSetChanged()
             updateUi()
+            upDateUiBottomSheet(bottomBinding)
             Toast.makeText(this, "Data entered successfully ✅", Toast.LENGTH_SHORT).show()
             bottomSheetDialog.dismiss()
 
