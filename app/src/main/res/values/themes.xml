@@ -3,6 +3,8 @@
     <style name="Base.Theme.ContactsApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="floatingActionButtonStyle">@style/CustomStyleFAB</item>
+
     </style>
 
     <style name="Theme.ContactsApp" parent="Base.Theme.ContactsApp" />
@@ -28,6 +30,10 @@
     <style name="Theme.ContactsApp_TextColor" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:textColorPrimary">@color/black</item>
 
+    </style>
+    <style name="CustomStyleFAB" parent="@style/Widget.Material3.FloatingActionButton.Secondary">
+        <item name="backgroundTint">@color/white</item>
+        <item name="tint">@color/primaryColor</item>
     </style>
 
 </resources>
